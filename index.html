@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🍊%3C/text%3E%3C/svg%3E">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Portfolio — ชิษณุพงศ์ เกตุพูนทอง (664245004)</title>
@@ -9,14 +10,16 @@
 <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@500;600&family=Sarabun:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --ink: #1c2e3d;
-    --muted: #4b5e6d;
-    --line: #dbe7ee;
-    --bg: #f3f8fb;
+    --ink: #3a2412;
+    --muted: #6b5443;
+    --line: #f6e2cf;
+    --bg: #fff8ef;
     --card: #ffffff;
-    --brand: #2f6f8a;
-    --brand-dark: #1e4d63;
-    --chip: #e6f1f6;
+    --brand: #e8590c;
+    --brand-dark: #b8430a;
+    --chip: #fff0e1;
+    --leaf: #2f9e44;
+    --leaf-soft: #e8f6ea;
   }
   * { box-sizing: border-box; }
   body {
@@ -42,7 +45,7 @@
     padding: 44px 40px 56px;
     border-radius: 24px;
     color: #fff;
-    background: linear-gradient(120deg, #1f3f57 0%, #2f6f8a 50%, #56b0c9 100%);
+    background: linear-gradient(120deg, #c2410c 0%, #ea580c 40%, #f59e0b 80%, #84cc16 130%);
   }
   .hero::before, .hero::after {
     content: "";
@@ -62,7 +65,7 @@
     width: 160px; height: 160px;
     border-radius: 50%;
     border: 5px solid rgba(255,255,255,.85);
-    background: linear-gradient(135deg, #e9f5fa, #bfe0ec);
+    background: linear-gradient(135deg, #fff4e6, #ffd8a8);
     color: var(--brand-dark);
     display: grid; place-items: center;
     font-family: "Kanit", sans-serif; font-size: 64px;
@@ -82,7 +85,7 @@
     font-family: "Kanit", sans-serif; font-weight: 500;
     text-decoration: none;
   }
-  .btn-light:hover { background: #e9f5fa; }
+  .btn-light:hover { background: #fff0e1; }
 
   /* Info */
   .info { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 28px 0 44px; }
@@ -99,7 +102,7 @@
   .section-title { display: flex; align-items: center; gap: 10px; font-size: 28px; margin: 0 0 22px; }
   .count {
     font-family: "Sarabun", sans-serif; font-size: 15px; font-weight: 600;
-    background: var(--chip); color: var(--brand-dark);
+    background: var(--leaf-soft); color: var(--leaf);
     padding: 0 10px; border-radius: 999px;
   }
   .works { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
@@ -107,7 +110,7 @@
     display: flex; flex-direction: column;
     background: var(--card);
     border: 1px solid var(--line);
-    border-top: 5px solid #56b0c9;
+    border-top: 5px solid #f59e0b;
     border-radius: 18px;
     padding: 22px 26px 26px;
   }
@@ -116,8 +119,8 @@
   .tags span {
     font-size: 14px; font-weight: 600;
     padding: 2px 12px; border-radius: 999px;
-    background: var(--chip); color: var(--brand-dark);
-    border: 1px solid var(--line);
+    background: var(--leaf-soft); color: #237032;
+    border: 1px solid #cdebd2;
   }
   .work p { margin: 0 0 20px; color: var(--muted); flex: 1; }
   .actions { display: flex; flex-wrap: wrap; gap: 10px; }
@@ -151,11 +154,10 @@
 <body>
 <div class="wrap">
 
-  <div class="brand">📁 Portfolio</div>
+  <div class="brand">🍊 Portfolio</div>
 
   <header class="hero">
-    <!-- ใส่รูปโปรไฟล์: วางไฟล์ profile.jpg ในโฟลเดอร์นี้ แล้วเปลี่ยน "ช" เป็น <img src="profile.jpg" alt="ชิษณุพงศ์ เกตุพูนทอง"> -->
-    <div class="avatar">ช</div>
+    <div class="avatar"><img src="profile.jpg" alt="ชิษณุพงศ์ เกตุพูนทอง"></div>
     <div class="hero-text">
       <h1>ชิษณุพงศ์ เกตุพูนทอง</h1>
       <div class="handle">pungpisduangdaw01-arch</div>
@@ -172,12 +174,12 @@
     <div><small>💻 สาขา</small><strong>วิทยาการคอมพิวเตอร์</strong></div>
   </section>
 
-  <h2 class="section-title">📚 ผลงานของฉัน <span class="count">5</span></h2>
+  <h2 class="section-title">🧺 ผลงานของฉัน <span class="count">5</span></h2>
 
   <section class="works">
 
     <article class="work">
-      <h3>📘 งานที่ 1 - Lab Week 2 Transaction</h3>
+      <h3>🍋 งานที่ 1 - Lab Week 2 Transaction</h3>
       <div class="tags"><span>MySQL</span><span>Python</span><span>Jupyter Notebook</span></div>
       <p>แล็บสัปดาห์ที่ 2 เรื่อง Transaction, Concurrency และ Recovery ทดลอง Dirty Read, Atomic Transaction, เปรียบเทียบ Autocommit กับ Explicit Transaction และจัดการ Deadlock ด้วย Retry สามารถเปิดรันบน Google Colab ได้</p>
       <div class="actions">
@@ -186,7 +188,7 @@
     </article>
 
     <article class="work">
-      <h3>📕 งานที่ 2 - ระบบชมรมด้วย Neo4j</h3>
+      <h3>🍓 งานที่ 2 - ระบบชมรมด้วย Neo4j</h3>
       <div class="tags"><span>Neo4j</span><span>Cypher</span><span>PDF</span></div>
       <p>ออกแบบกราฟนักศึกษาและชมรม กำหนดความสัมพันธ์ FRIEND และ MEMBER_OF แล้วเขียน Cypher แนะนำชมรมที่เพื่อนของนักศึกษาเป็นสมาชิกมากที่สุด</p>
       <div class="actions">
@@ -195,7 +197,7 @@
     </article>
 
     <article class="work">
-      <h3>📘 งานที่ 3 - ระบบแนะนำผลไม้ด้วย Graph</h3>
+      <h3>🥭 งานที่ 3 - ระบบแนะนำผลไม้ด้วย Graph</h3>
       <div class="tags"><span>Python</span><span>NetworkX</span><span>Jupyter Notebook</span></div>
       <p>สร้างกราฟผู้ใช้ 10 คนและผลไม้ 5 ชนิดด้วย NetworkX แล้วเดินบนกราฟหาผู้ใช้ที่ชอบผลไม้เหมือนกัน เพื่อแนะนำผลไม้ที่ยังไม่เคยเลือก สามารถเปิดรันบน Google Colab ได้</p>
       <div class="actions">
@@ -204,7 +206,7 @@
     </article>
 
     <article class="work">
-      <h3>📘 งานที่ 4 - ระบบแนะนำผลไม้ด้วย Neo4j Aura</h3>
+      <h3>🍇 งานที่ 4 - ระบบแนะนำผลไม้ด้วย Neo4j Aura</h3>
       <div class="tags"><span>Neo4j</span><span>Python</span><span>Jupyter Notebook</span></div>
       <p>เชื่อม Neo4j Aura จาก Python สร้าง User, Fruit และความสัมพันธ์ LIKES กับ SIMILAR_TO แล้วใช้ Cypher แนะนำผลไม้จากผู้ใช้ที่มีความชอบคล้ายกัน สามารถเปิดรันบน Google Colab ได้</p>
       <div class="actions">

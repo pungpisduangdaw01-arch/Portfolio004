@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio — ชิษณุพงศ์ เกตุพูนทอง (664245004)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@500;600&family=Sarabun:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1c2e3d;
+    --muted: #4b5e6d;
+    --line: #dbe7ee;
+    --bg: #f3f8fb;
+    --card: #ffffff;
+    --brand: #2f6f8a;
+    --brand-dark: #1e4d63;
+    --chip: #e6f1f6;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "Sarabun", system-ui, sans-serif;
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--ink);
+    background: var(--bg);
+  }
+  h1, h2, h3, .brand { font-family: "Kanit", "Sarabun", sans-serif; font-weight: 600; }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 24px 20px 40px; }
+
+  .brand { font-size: 18px; margin: 4px 0 28px; display: flex; gap: 8px; align-items: center; }
+
+  /* Hero */
+  .hero {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    gap: 36px;
+    align-items: center;
+    padding: 44px 40px 56px;
+    border-radius: 24px;
+    color: #fff;
+    background: linear-gradient(120deg, #1f3f57 0%, #2f6f8a 50%, #56b0c9 100%);
+  }
+  .hero::before, .hero::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255,255,255,.14);
+  }
+  .hero::before { width: 80px; height: 80px; right: 60px; top: 30px; }
+  .hero::after  { width: 36px; height: 36px; right: 220px; bottom: 80px; }
+  .hero .wave {
+    position: absolute; left: 0; right: 0; bottom: 0; height: 40px;
+    background: rgba(255,255,255,.18);
+    border-radius: 60% 40% 0 0 / 100% 100% 0 0;
+  }
+  .avatar {
+    flex: none;
+    width: 160px; height: 160px;
+    border-radius: 50%;
+    border: 5px solid rgba(255,255,255,.85);
+    background: linear-gradient(135deg, #e9f5fa, #bfe0ec);
+    color: var(--brand-dark);
+    display: grid; place-items: center;
+    font-family: "Kanit", sans-serif; font-size: 64px;
+    position: relative; z-index: 1;
+  }
+  .avatar img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; }
+  .hero-text { position: relative; z-index: 1; }
+  .hero h1 { margin: 0; font-size: 40px; line-height: 1.25; }
+  .hero .handle { margin: 4px 0 8px; opacity: .85; font-size: 20px; }
+  .hero p { margin: 0 0 18px; font-size: 19px; }
+  .btn-light {
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: 999px;
+    background: #fff;
+    color: var(--brand-dark);
+    font-family: "Kanit", sans-serif; font-weight: 500;
+    text-decoration: none;
+  }
+  .btn-light:hover { background: #e9f5fa; }
+
+  /* Info */
+  .info { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 28px 0 44px; }
+  .info div {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 14px 20px;
+  }
+  .info small { display: block; color: var(--muted); font-size: 14px; }
+  .info strong { font-size: 18px; font-weight: 600; }
+
+  /* Works */
+  .section-title { display: flex; align-items: center; gap: 10px; font-size: 28px; margin: 0 0 22px; }
+  .count {
+    font-family: "Sarabun", sans-serif; font-size: 15px; font-weight: 600;
+    background: var(--chip); color: var(--brand-dark);
+    padding: 0 10px; border-radius: 999px;
+  }
+  .works { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .work {
+    display: flex; flex-direction: column;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-top: 5px solid #56b0c9;
+    border-radius: 18px;
+    padding: 22px 26px 26px;
+  }
+  .work h3 { margin: 0 0 12px; font-size: 21px; line-height: 1.4; }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+  .tags span {
+    font-size: 14px; font-weight: 600;
+    padding: 2px 12px; border-radius: 999px;
+    background: var(--chip); color: var(--brand-dark);
+    border: 1px solid var(--line);
+  }
+  .work p { margin: 0 0 20px; color: var(--muted); flex: 1; }
+  .actions { display: flex; flex-wrap: wrap; gap: 10px; }
+  .btn {
+    display: inline-block;
+    padding: 9px 22px;
+    border-radius: 999px;
+    background: var(--brand);
+    color: #fff;
+    font-family: "Kanit", sans-serif; font-weight: 500;
+    text-decoration: none;
+    border: 1.5px solid var(--brand);
+  }
+  .btn:hover { background: var(--brand-dark); border-color: var(--brand-dark); }
+  .btn.ghost { background: transparent; color: var(--brand-dark); }
+  .btn.ghost:hover { background: var(--chip); }
+
+  footer { text-align: center; color: var(--muted); font-size: 15px; margin-top: 48px; }
+
+  @media (max-width: 900px) {
+    .info { grid-template-columns: repeat(2, 1fr); }
+    .works { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 620px) {
+    .hero { flex-direction: column; text-align: center; padding: 32px 22px 52px; }
+    .hero h1 { font-size: 32px; }
+    .info, .works { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="brand">📁 Portfolio</div>
+
+  <header class="hero">
+    <!-- ใส่รูปโปรไฟล์: วางไฟล์ profile.jpg ในโฟลเดอร์นี้ แล้วเปลี่ยน "ช" เป็น <img src="profile.jpg" alt="ชิษณุพงศ์ เกตุพูนทอง"> -->
+    <div class="avatar">ช</div>
+    <div class="hero-text">
+      <h1>ชิษณุพงศ์ เกตุพูนทอง</h1>
+      <div class="handle">pungpisduangdaw01-arch</div>
+      <p>นักศึกษาวิทยาการคอมพิวเตอร์ เว็บนี้รวบรวมผลงานที่ส่งอาจารย์</p>
+      <a class="btn-light" href="https://github.com/pungpisduangdaw01-arch" target="_blank" rel="noopener">ดูโปรไฟล์ GitHub</a>
+    </div>
+    <div class="wave"></div>
+  </header>
+
+  <section class="info">
+    <div><small>🆔 รหัสนักศึกษา</small><strong>664245004</strong></div>
+    <div><small>👥 หมู่เรียน</small><strong>66/43</strong></div>
+    <div><small>🏫 คณะ</small><strong>วิทยาศาสตร์และเทคโนโลยี</strong></div>
+    <div><small>💻 สาขา</small><strong>วิทยาการคอมพิวเตอร์</strong></div>
+  </section>
+
+  <h2 class="section-title">📚 ผลงานของฉัน <span class="count">5</span></h2>
+
+  <section class="works">
+
+    <article class="work">
+      <h3>📘 งานที่ 1 - Lab Week 2 Transaction</h3>
+      <div class="tags"><span>MySQL</span><span>Python</span><span>Jupyter Notebook</span></div>
+      <p>แล็บสัปดาห์ที่ 2 เรื่อง Transaction, Concurrency และ Recovery ทดลอง Dirty Read, Atomic Transaction, เปรียบเทียบ Autocommit กับ Explicit Transaction และจัดการ Deadlock ด้วย Retry สามารถเปิดรันบน Google Colab ได้</p>
+      <div class="actions">
+        <a class="btn" href="https://colab.research.google.com/drive/1_0MoGfxBezTdgO0AHChJynUdETeh4DzJ?usp=sharing" target="_blank" rel="noopener">เปิดใน Colab</a>
+      </div>
+    </article>
+
+    <article class="work">
+      <h3>📕 งานที่ 2 - ระบบชมรมด้วย Neo4j</h3>
+      <div class="tags"><span>Neo4j</span><span>Cypher</span><span>PDF</span></div>
+      <p>ออกแบบกราฟนักศึกษาและชมรม กำหนดความสัมพันธ์ FRIEND และ MEMBER_OF แล้วเขียน Cypher แนะนำชมรมที่เพื่อนของนักศึกษาเป็นสมาชิกมากที่สุด</p>
+      <div class="actions">
+        <a class="btn" href="works/Club_Recommendation_Neo4j.pdf" target="_blank" rel="noopener">เปิดไฟล์ PDF</a>
+      </div>
+    </article>
+
+    <article class="work">
+      <h3>📘 งานที่ 3 - ระบบแนะนำผลไม้ด้วย Graph</h3>
+      <div class="tags"><span>Python</span><span>NetworkX</span><span>Jupyter Notebook</span></div>
+      <p>สร้างกราฟผู้ใช้ 10 คนและผลไม้ 5 ชนิดด้วย NetworkX แล้วเดินบนกราฟหาผู้ใช้ที่ชอบผลไม้เหมือนกัน เพื่อแนะนำผลไม้ที่ยังไม่เคยเลือก สามารถเปิดรันบน Google Colab ได้</p>
+      <div class="actions">
+        <a class="btn" href="https://colab.research.google.com/github/pungpisduangdaw01-arch/Portfolio004/blob/main/works/Fruit_Graph_NetworkX.ipynb" target="_blank" rel="noopener">เปิดใน Colab</a>
+      </div>
+    </article>
+
+    <article class="work">
+      <h3>📘 งานที่ 4 - ระบบแนะนำผลไม้ด้วย Neo4j Aura</h3>
+      <div class="tags"><span>Neo4j</span><span>Python</span><span>Jupyter Notebook</span></div>
+      <p>เชื่อม Neo4j Aura จาก Python สร้าง User, Fruit และความสัมพันธ์ LIKES กับ SIMILAR_TO แล้วใช้ Cypher แนะนำผลไม้จากผู้ใช้ที่มีความชอบคล้ายกัน สามารถเปิดรันบน Google Colab ได้</p>
+      <div class="actions">
+        <a class="btn" href="https://colab.research.google.com/github/pungpisduangdaw01-arch/Portfolio004/blob/main/works/Fruit_Neo4j.ipynb" target="_blank" rel="noopener">เปิดใน Colab</a>
+      </div>
+    </article>
+
+    <article class="work">
+      <h3>🍎 งานที่ 5 - Fruit Recommendation System</h3>
+      <div class="tags"><span>Python</span><span>Streamlit</span><span>Neo4j</span></div>
+      <p>เว็บแอปแนะนำผลไม้ด้วย Neo4j พัฒนาด้วย Streamlit เพิ่ม / แก้ไข / ลบ ผู้ใช้ ผลไม้ และความสัมพันธ์ได้ พร้อมอธิบายเหตุผลของแต่ละคำแนะนำ และมีสไลด์นำเสนอระบบ</p>
+      <div class="actions">
+        <!-- ใส่ลิงก์เว็บ Streamlit ที่ deploy แล้วแทน # -->
+        <a class="btn" href="#" target="_blank" rel="noopener">เปิดเว็บ Streamlit</a>
+        <a class="btn ghost" href="works/FruitRecommender_Presentation.pptx">ดาวน์โหลดสไลด์</a>
+        <a class="btn ghost" href="https://github.com/pungpisduangdaw01-arch/664245004pj" target="_blank" rel="noopener">ดูโค้ด</a>
+      </div>
+    </article>
+
+  </section>
+
+  <footer>© 2026 ชิษณุพงศ์ เกตุพูนทอง · 664245004</footer>
+</div>
+</body>
+</html>
